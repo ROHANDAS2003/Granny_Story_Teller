@@ -165,6 +165,20 @@ def s9():
         new_story()
 
 
+def s10():
+    global query
+    speak("do you know squirrels")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of squirrels")
+        os.startfile("granny 10.0.mp3")
+        time.sleep(83)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 10.0.mp3")
+        time.sleep(83)
+        new_story()
 
 
 
