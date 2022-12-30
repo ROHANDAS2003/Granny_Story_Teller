@@ -19,6 +19,52 @@ global num
 def n():
     global num
     num = random.randint(1, 20)
+    n1(num)
+
+
+def n1(num):
+    if num == 1:
+        s1()
+    elif num == 2:
+        s2()
+    elif num == 3:
+        s3()
+    elif num == 4:
+        s4()
+    elif num == 5:
+        s5()
+    elif num == 6:
+        s6()
+    elif num == 7:
+        s7()
+    elif num == 8:
+        s8()
+    elif num == 9:
+        s9()
+    elif num == 10:
+        s10()
+    elif num == 11:
+        s11()
+    elif num == 12:
+        s12()
+    elif num == 13:
+        s13()
+    elif num == 14:
+        s14()
+    elif num == 15:
+        s15()
+    elif num == 16:
+        s16()
+    elif num == 17:
+        s17()
+    elif num == 18:
+        s18()
+    elif num == 19:
+        s19()
+    elif num == 20:
+        s20()
+
+
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
