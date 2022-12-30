@@ -16,6 +16,20 @@ global wish
 global num
 
 
+def s1():
+    global query
+    speak("do you know crow")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of crow")
+        os.startfile("granny 1.0.mp3")
+        time.sleep(114)
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 1.0.mp3")
+        time.sleep(114)
+
+
 def n():
     global num
     num = random.randint(1, 20)
