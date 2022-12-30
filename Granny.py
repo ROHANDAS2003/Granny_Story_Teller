@@ -13,6 +13,12 @@ engine.setProperty("rate", 180)
 
 global query
 global wish
+global num
+
+
+def n():
+    global num
+    num = random.randint(1, 20)
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
@@ -49,55 +55,69 @@ def wished():
         speak("when someone have many choices they are confused")
         speak("but guess what, that's where your granny could help you")
         speak("I know which story you should listen right now")
+        story()
     elif "do not know" in query:
         speak("okay, so you seems like confused about so many choices. its totally normal")
         speak("when someone have many choices they are confused")
         speak("but guess what, that's where your granny could help you")
         speak("I know which story you should listen right now")
+        story()
     elif "your choice" in query:
         speak("okay, of my choice haa")
         speak("actually i remember one, would you like to listen it")
         query = take_command().lower()
         if "yes" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         elif "sure" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         else:
             speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
             speak("so now, i am starting the story. be quite and listen carefully")
+            story()
     elif "any" in query:
         speak("okay, of my choice haa")
         speak("actually i remember one, would you like to listen it")
         query = take_command().lower()
         if "yes" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         elif "sure" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         else:
             speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
             speak("so now, i am starting the story. be quite and listen carefully")
+            story()
     elif "anyone" in query:
         speak("okay, of my choice haa")
         speak("actually i remember one, would you like to listen it")
         query = take_command().lower()
         if "yes" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         elif "sure" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         else:
             speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
             speak("so now, i am starting the story. be quite and listen carefully")
+            story()
     elif "like to tell" in query:
         speak("okay, of my choice haa")
         speak("actually i remember one, would you like to listen it")
         query = take_command().lower()
         if "yes" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         elif "sure" in query:
             speak("so, i am starting the story. be quite and listen carefully")
+            story()
         else:
             speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
             speak("so now, i am starting the story. be quite and listen carefully")
+            story()
     elif "don't want" in query:
         speak("so, should i go to sleep")
         query = take_command().lower()
@@ -109,6 +129,7 @@ def wished():
             speak("so, it seems as you are teasing you are granny")
             speak("don't do that")
             speak("now, i am starting a story")
+            story()
     elif "do not want" in query:
         speak("so, should i go to sleep")
         query = take_command().lower()
@@ -120,6 +141,7 @@ def wished():
             speak("so, it seems as you are teasing you are granny")
             speak("don't do that")
             speak("now, i am starting a story")
+            story()
     else:
         wished()
 
@@ -132,9 +154,17 @@ def not_wished():
     if "nothing" in query:
         speak("okay, but i am sure that, now onwards you will like this story the most")
         speak("so now, i am starting the story. be quite and listen carefully")
+        story()
     else:
         speak("yaa, i like it too")
         speak("but you know that i like this story the most")
+        story()
+
+
+def story():
+    n()
+
+
 
 
 def sleep():
