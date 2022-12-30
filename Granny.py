@@ -198,6 +198,20 @@ def s11():
         new_story()
 
 
+def s12():
+    global query
+    speak("do you know the exams")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of exams")
+        os.startfile("granny 12.0.mp3")
+        time.sleep(54)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 12.0.mp3")
+        time.sleep(54)
+        new_story()
 
 
 
