@@ -4,3 +4,11 @@ import datetime
 import random
 import os
 import time
+
+engine = pyttsx3.init("sapi5")
+voices = engine.getProperty("voices")
+engine.setProperty("voice", voices[1].id)
+rate = engine.getProperty("rate")
+engine.setProperty("rate", 180)
+
+if __name__ == "__main__":
