@@ -24,10 +24,14 @@ def s1():
         speak("ya so here is a story of crow")
         os.startfile("granny 1.0.mp3")
         time.sleep(114)
+        new_story()
     else:
         speak("don't worry by this story you get to know")
         os.startfile("granny 1.0.mp3")
         time.sleep(114)
+        new_story()
+
+
 
 
 def n():
@@ -225,6 +229,28 @@ def story():
     n()
 
 
+def new_story():
+    global query
+    speak("Want to listen one more")
+    query = take_command().lower()
+    if "yes" in query:
+        story()
+    elif "sure" in query:
+        story()
+    elif "no" in query:
+        speak("so, should i go to sleep")
+        query = take_command().lower()
+        if "yes" in query:
+            sleep()
+        elif "sure" in query:
+            sleep()
+        else:
+            speak("so, it seems as you are teasing you are granny")
+            speak("don't do that")
+            speak("now, i am starting a story")
+            story()
+    else:
+        story()
 
 
 def sleep():
