@@ -181,6 +181,21 @@ def s10():
         new_story()
 
 
+def s11():
+    global query
+    speak("do you like muli ke parathe")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("i like it too")
+        speak("so here is a story of muli ke parathe")
+        os.startfile("granny 11.0.mp3")
+        time.sleep(173)
+        new_story()
+    else:
+        speak("okay but i think you will like this story about muli ke parathe")
+        os.startfile("granny 11.0.mp3")
+        time.sleep(173)
+        new_story()
 
 
 
