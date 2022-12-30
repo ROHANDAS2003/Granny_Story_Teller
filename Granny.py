@@ -149,6 +149,20 @@ def s8():
         new_story()
 
 
+def s9():
+    global query
+    speak("do you know who are prince and princess")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of prince and princess")
+        os.startfile("granny 9.0.mp3")
+        time.sleep(66)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 9.0.mp3")
+        time.sleep(66)
+        new_story()
 
 
 
