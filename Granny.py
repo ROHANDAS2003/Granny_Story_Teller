@@ -260,6 +260,21 @@ def s16():
         new_story()
 
 
+def s17():
+    global query
+    speak("do you know rabbits")
+    speak("they are also know as bunny")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of brave bunny")
+        os.startfile("granny 17.0.mp3")
+        time.sleep(79)
+        new_story()
+    else:
+        speak("don't worry by this story, brave bunny, you get to know")
+        os.startfile("granny 17.0.mp3")
+        time.sleep(79)
+        new_story()
 
 
 
