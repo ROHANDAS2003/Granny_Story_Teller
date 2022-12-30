@@ -81,6 +81,21 @@ def s4():
         new_story()
 
 
+def s5():
+    global query
+    speak("do you know birbal")
+    speak("the intelligent commander of king akbar")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of his intelligence")
+        os.startfile("granny 5.0.mp3")
+        time.sleep(72)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 5.0.mp3")
+        time.sleep(72)
+        new_story()
 
 
 
