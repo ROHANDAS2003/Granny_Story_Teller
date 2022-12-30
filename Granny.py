@@ -214,6 +214,10 @@ def s12():
         new_story()
 
 
+def s13():
+    os.startfile("granny 13.0.mp3")
+    time.sleep(76)
+    new_story()
 
 
 
