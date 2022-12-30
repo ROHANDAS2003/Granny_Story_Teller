@@ -102,7 +102,9 @@ def wished():
         speak("so, should i go to sleep")
         query = take_command().lower()
         if "yes" in query:
+            sleep()
         elif "sure" in query:
+            sleep()
         else:
             speak("so, it seems as you are teasing you are granny")
             speak("don't do that")
@@ -111,13 +113,22 @@ def wished():
         speak("so, should i go to sleep")
         query = take_command().lower()
         if "yes" in query:
+            sleep()
         elif "sure" in query:
+            sleep()
         else:
             speak("so, it seems as you are teasing you are granny")
             speak("don't do that")
             speak("now, i am starting a story")
     else:
         wished()
+def sleep():
+    speak("sleeping...")
+    speak("you should go and do your home work")
+    speak("bye..")
+    exit()
+
+
 def take_command():
     global query
     r = sr.Recognizer()
