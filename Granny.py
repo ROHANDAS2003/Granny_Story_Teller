@@ -122,6 +122,21 @@ def wished():
             speak("now, i am starting a story")
     else:
         wished()
+
+
+def not_wished():
+    global query
+    speak("you should wish when someone wishes you, okay")
+    speak("so, what do you like the most")
+    query = take_command().lower()
+    if "nothing" in query:
+        speak("okay, but i am sure that, now onwards you will like this story the most")
+        speak("so now, i am starting the story. be quite and listen carefully")
+    else:
+        speak("yaa, i like it too")
+        speak("but you know that i like this story the most")
+
+
 def sleep():
     speak("sleeping...")
     speak("you should go and do your home work")
@@ -148,4 +163,7 @@ if __name__ == "__main__":
     wish_me()
     speak("I am your Virtual granny, You can call me granny")
     query = take_command().lower()
+    if wish in query:
         wished()
+    else:
+        not_wished()
