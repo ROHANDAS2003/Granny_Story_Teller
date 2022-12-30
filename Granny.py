@@ -294,6 +294,20 @@ def s18():
         new_story()
 
 
+def s19():
+    global query
+    speak("do you know magic")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of magical kingdom")
+        os.startfile("granny 19.0.mp3")
+        time.sleep(173)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 19.0.mp3")
+        time.sleep(173)
+        new_story()
 
 
 
