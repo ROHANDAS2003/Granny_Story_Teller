@@ -40,6 +40,84 @@ def wish_me():
         speak(wish)
 
 
+def wished():
+    global query
+    speak("which story do you want to listen")
+    query = take_command().lower()
+    if "don't know" in query:
+        speak("okay, so you seems like confused about so many choices. its totally normal")
+        speak("when someone have many choices they are confused")
+        speak("but guess what, that's where your granny could help you")
+        speak("I know which story you should listen right now")
+    elif "do not know" in query:
+        speak("okay, so you seems like confused about so many choices. its totally normal")
+        speak("when someone have many choices they are confused")
+        speak("but guess what, that's where your granny could help you")
+        speak("I know which story you should listen right now")
+    elif "your choice" in query:
+        speak("okay, of my choice haa")
+        speak("actually i remember one, would you like to listen it")
+        query = take_command().lower()
+        if "yes" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        elif "sure" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        else:
+            speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
+            speak("so now, i am starting the story. be quite and listen carefully")
+    elif "any" in query:
+        speak("okay, of my choice haa")
+        speak("actually i remember one, would you like to listen it")
+        query = take_command().lower()
+        if "yes" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        elif "sure" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        else:
+            speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
+            speak("so now, i am starting the story. be quite and listen carefully")
+    elif "anyone" in query:
+        speak("okay, of my choice haa")
+        speak("actually i remember one, would you like to listen it")
+        query = take_command().lower()
+        if "yes" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        elif "sure" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        else:
+            speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
+            speak("so now, i am starting the story. be quite and listen carefully")
+    elif "like to tell" in query:
+        speak("okay, of my choice haa")
+        speak("actually i remember one, would you like to listen it")
+        query = take_command().lower()
+        if "yes" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        elif "sure" in query:
+            speak("so, i am starting the story. be quite and listen carefully")
+        else:
+            speak("seems you are in mood to tease your granny. don't do so, let me tell the story")
+            speak("so now, i am starting the story. be quite and listen carefully")
+    elif "don't want" in query:
+        speak("so, should i go to sleep")
+        query = take_command().lower()
+        if "yes" in query:
+        elif "sure" in query:
+        else:
+            speak("so, it seems as you are teasing you are granny")
+            speak("don't do that")
+            speak("now, i am starting a story")
+    elif "do not want" in query:
+        speak("so, should i go to sleep")
+        query = take_command().lower()
+        if "yes" in query:
+        elif "sure" in query:
+        else:
+            speak("so, it seems as you are teasing you are granny")
+            speak("don't do that")
+            speak("now, i am starting a story")
+    else:
+        wished()
 def take_command():
     global query
     r = sr.Recognizer()
@@ -58,3 +136,5 @@ def take_command():
 if __name__ == "__main__":
     wish_me()
     speak("I am your Virtual granny, You can call me granny")
+    query = take_command().lower()
+        wished()
