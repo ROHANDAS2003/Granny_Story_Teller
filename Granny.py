@@ -67,6 +67,38 @@ def s3():
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def n():
     global num
     num = random.randint(1, 20)
