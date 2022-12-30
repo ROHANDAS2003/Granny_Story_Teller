@@ -65,6 +65,20 @@ def s3():
         new_story()
 
 
+def s4():
+    global query
+    speak("do you know a friend in need is a friend in deed")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story related to it")
+        os.startfile("granny 4.0.mp3")
+        time.sleep(56)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 4.0.mp3")
+        time.sleep(56)
+        new_story()
 
 
 
