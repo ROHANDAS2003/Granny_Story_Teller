@@ -220,6 +220,21 @@ def s13():
     new_story()
 
 
+def s14():
+    global query
+    speak("do you like cookies")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("i like them too")
+        speak("so here is a story of cookie monster")
+        os.startfile("granny 14.0.mp3")
+        time.sleep(101)
+        new_story()
+    else:
+        speak("but you will like this cookie monster's story")
+        os.startfile("granny 14.0.mp3")
+        time.sleep(101)
+        new_story()
 
 
 
