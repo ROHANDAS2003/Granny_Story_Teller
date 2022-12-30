@@ -132,6 +132,21 @@ def s7():
         new_story()
 
 
+def s8():
+    global query
+    speak("do you know dinosaurs")
+    speak("actually they were in the world long time ago")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of dinosaurs")
+        os.startfile("granny 8.0.mp3")
+        time.sleep(120)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 8.0.mp3")
+        time.sleep(120)
+        new_story()
 
 
 
