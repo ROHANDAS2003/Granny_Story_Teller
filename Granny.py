@@ -32,6 +32,22 @@ def s1():
         new_story()
 
 
+def s2():
+    global query
+    speak("do you know ant")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story of ant")
+        os.startfile("granny 2.0.mp3")
+        time.sleep(129)
+        new_story()
+    else:
+        speak("don't worry by this story you get to know")
+        os.startfile("granny 2.0.mp3")
+        time.sleep(129)
+        new_story()
+
+
 
 
 def n():
