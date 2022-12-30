@@ -115,6 +115,21 @@ def s6():
         new_story()
 
 
+def s7():
+    global query
+    speak("do you have a best friend")
+    query = take_command().lower()
+    if "yes" in query:
+        speak("ya so here is a story named best friend")
+        os.startfile("granny 7.0.mp3")
+        time.sleep(79)
+        new_story()
+    else:
+        speak("don't worry you will get one")
+        speak("here's a story named best friend")
+        os.startfile("granny 7.0.mp3")
+        time.sleep(79)
+        new_story()
 
 
 
