@@ -11,6 +11,8 @@ engine.setProperty("voice", voices[1].id)
 rate = engine.getProperty("rate")
 engine.setProperty("rate", 180)
 
+global query
+global wish
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
@@ -36,6 +38,21 @@ def wish_me():
         wish = "good night"
         print("good night")
         speak(wish)
+
+
+def take_command():
+    global query
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("listening...")
+        audio = r.listen(source)
+    try:
+        print("Recognising")
+        query = r.recognize_google(audio, language='en-in')
+    except Exception as e:
+        print(e)
+        return "None"
+    return query
 
 
 if __name__ == "__main__":
